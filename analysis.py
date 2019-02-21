@@ -18,12 +18,12 @@ sns.lmplot("total_bill", "tip", tips, col="smoker").fig.suptitle("Tips Regressio
 
 # Explore the dataframe in grid output
 pd.options.display.html.table_schema = True
-tips.head()
+tips.head(10)
 
 # Using IPython's Rich Display System
 # -----------------------------------
 #
-# IPython has a [rich display system](bit.ly/HHPOac) for
+# IPython has a [rich display system](https://bit.ly/2XfMnzu) for
 # interactive widgets.
 
 from IPython.display import IFrame
@@ -32,9 +32,9 @@ from IPython.core.display import display
 # Define a google maps function.
 def gmaps(query):
   url = "https://maps.google.com/maps?q={0}&output=embed".format(query)
-  display(IFrame(url, '700px', '450px'))
+  display(IFrame(url, '850px', '500px'))
 
-gmaps("Golden Gate Bridge")
+gmaps("Portofinos Pizza and Pasta")
 
 # Worker Engines
 # -----------------
@@ -44,4 +44,4 @@ gmaps("Golden Gate Bridge")
 # memory each.
 
 # import cdsw
-# workers = cdsw.launch_workers(n=2, cpu=0.2, memory=0.5, code="print 'Hello from a CDSW Worker'")
+# workers = cdsw.launch_workers(n=2, cpu=0.2, memory=0.5, code="print ('Hello from a CDSW Worker')")
